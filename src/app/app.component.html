@@ -1,0 +1,13 @@
+<div class="header" [ngStyle]="{backgroundColor: selectedColor.value}">
+  <h2>Angular Material CDK Workshop</h2>
+</div>
+<div class="content">
+  <span>You selected color - {{selectedColor.value}}</span>
+  <br>
+  <button mat-button [artColorTrigger]="colorPicker" [ngStyle]="{backgroundColor: selectedColor.value}" class="art">Select
+    new theme Color
+  </button>
+</div>
+<mat-toolbar [ngStyle]="{backgroundColor: selectedColor.value}">Toolbar test</mat-toolbar>
+<art-color-picker #colorPicker [colors]="colors" [(value)]="selectedColor"></art-color-picker>
+<router-outlet></router-outlet>
